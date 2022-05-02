@@ -1,1 +1,3 @@
-# ml_stuff
+# Machine learning tutorials
+
+Thanks sentdex.
