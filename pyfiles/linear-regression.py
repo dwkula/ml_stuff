@@ -11,6 +11,8 @@ b = mean(y) - m*mean(x)
 y = (mean(x) * mean(y) - mean(xy)) / (mean(x)^2 - mean(x^2)) * x + mean(y) - m*mean(x)
 
 It works on 2d data.
+
+# linear regression can do classification problems if the data is linear, for example if we have 2 groups of linear data we can draw BFL through first group and then throu second one, so that we have two BFL. Then we if we want to predict group label for specfic point we can measure its distance (R^2 error) to one of the BFLs and assign it that way.
 """
 from statistics import mean
 import numpy as np
@@ -82,5 +84,5 @@ r_squared = coef_of_det(ys, regression_line)
 plt.scatter(xs, ys)
 plt.plot(xs, regression_line)
 plt.show()
-
+print(xs, ys)
 # as we decrease variance the r squared is getting higher, which is correct because the higher the variance the less linear the data gets. The lesser the variance the more linear it is, so our r squared is getting higher because error SEy^ is lesser than error SEmean(y). 1 - 2/10 = 0.8  etc. if we turn off correlation completly we can see that the data is not linear at all and our R^2 is nearly 0. This tell us that the data is not linear so linear regression will not work here.
